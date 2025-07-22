@@ -17,4 +17,4 @@ function SearchBar({ searchTerm, onSearchChange }: SearchBarProps) {
   )
 }
 
-export default SearchBar
+export default SearchBar;
