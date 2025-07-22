@@ -6,6 +6,7 @@ interface ContactListProps {
   onEdit: (contact: Contact) => void
 }
 
+
 function ContactList({ contacts, onDelete, onEdit }: ContactListProps) {
   return (
     <div className="contact-list">

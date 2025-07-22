@@ -6,6 +6,7 @@ interface ContactFormProps {
   editingContact: Contact | null
   onUpdate: (contact: Contact) => void
   onCancelEdit: () => void
+  
 }
 
 function ContactForm({ onSubmit, editingContact, onUpdate, onCancelEdit }: ContactFormProps) {
@@ -13,7 +14,6 @@ function ContactForm({ onSubmit, editingContact, onUpdate, onCancelEdit }: Conta
   const [lastName, setLastName] = useState('')
   const [phone, setPhone] = useState('')
 
-  // Rellenar campos al editar
   React.useEffect(() => {
     if (editingContact) {
       setName(editingContact.name)

@@ -1,6 +1,7 @@
 interface ThemeToggleProps {
   theme: 'light' | 'dark'
   setTheme: (t: 'light' | 'dark') => void
+  
 }
 
 function ThemeToggle({ theme, setTheme }: ThemeToggleProps) {

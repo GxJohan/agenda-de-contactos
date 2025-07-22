@@ -11,7 +11,6 @@ function getInitialTheme() {
   if (typeof window !== 'undefined') {
     const saved = localStorage.getItem('theme')
     if (saved === 'dark' || saved === 'light') return saved
-    // Preferencia del sistema
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark'
   }
   return 'light'
@@ -43,7 +42,7 @@ function App() {
 
   const handleEditContact = (contact: Contact) => {
     setEditingContact(contact)
-    setSearchTerm('') // opcional: limpiar búsqueda al editar
+    setSearchTerm('') 
   }
 
   const handleUpdateContact = (updatedContact: Contact) => {
@@ -51,7 +50,6 @@ function App() {
     setEditingContact(null)
   }
 
-  // Filtrado en tiempo real por nombre, apellido y teléfono
   const filteredContacts = contacts.filter(contact => {
     const term = searchTerm.toLowerCase();
     return (
@@ -59,6 +57,7 @@ function App() {
       contact.lastName.toLowerCase().includes(term) ||
       contact.phone.toLowerCase().includes(term)
     );
+    
   });
 
   return (
