@@ -1,3 +1,4 @@
+// Si no puede visualizar los cambio en la rama exfi es porque me confundi y lo hice en la rama main mis disculpas
 import { Contact } from '../types/Contact.tsx'
 
 interface ContactListProps {
@@ -5,6 +6,7 @@ interface ContactListProps {
   onDelete: (id: string) => void
   onEdit: (contact: Contact) => void
 }
+
 
 function ContactList({ contacts, onDelete, onEdit }: ContactListProps) {
   return (
@@ -16,7 +18,7 @@ function ContactList({ contacts, onDelete, onEdit }: ContactListProps) {
           {contacts.map(contact => (
             <li key={contact.id} className="contact-item">
               <div>
-                <strong>{contact.name}</strong>
+                <strong>{contact.name} {contact.lastName}</strong>
                 <span> - {contact.phone}</span>
               </div>
               <div className="contact-actions">
